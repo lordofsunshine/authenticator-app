@@ -1,3 +1,5 @@
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+
 class Authenticator {
     constructor() {
         this.codes = JSON.parse(localStorage.getItem('authCodes') || '[]');
