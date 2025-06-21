@@ -1,0 +1,499 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0a0a0a url('../background.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    line-height: 1.6;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.85);
+    z-index: -1;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #ffffff;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+.header-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ccc;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    background: #2a2a2a;
+    transition: all 0.3s ease;
+}
+
+.github-link:hover {
+    background: #333;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.github-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.language-switcher {
+    display: flex;
+    gap: 0.3rem;
+    align-self: center;
+}
+
+.lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.4rem 0.8rem;
+    background: #2a2a2a;
+    border: none;
+    border-radius: 6px;
+    color: #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.85rem;
+}
+
+.lang-btn:hover {
+    background: #333;
+    color: #fff;
+}
+
+.lang-btn.active {
+    background: #444;
+    color: #fff;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.flag-icon {
+    width: 16px;
+    height: 12px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.input-section {
+    background: #1a1a1a4a;
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 3rem;
+    border: 1px solid #333;
+}
+
+.input-group {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+#secretKey {
+    flex: 1;
+    padding: 1rem;
+    background: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#secretKey:focus {
+    border-color: #666;
+    background: #333;
+}
+
+#secretKey::placeholder {
+    color: #888;
+}
+
+#addKey {
+    padding: 1rem 2rem;
+    background: #ffffff;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+#addKey:hover {
+    background: #f0f0f0;
+    transform: translateY(-1px);
+}
+
+.upload-section {
+    margin-top: 2rem;
+}
+
+.upload-area {
+    border: 2px dashed #444;
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: #1a1a1a;
+}
+
+.upload-area:hover {
+    border-color: #666;
+    background: #222;
+}
+
+.upload-area.dragover {
+    border-color: #888;
+    background: #2a2a2a;
+}
+
+.upload-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.upload-icon {
+    width: 48px;
+    height: 48px;
+    fill: #666;
+}
+
+.upload-content p {
+    color: #ccc;
+    font-size: 1.1rem;
+}
+
+.upload-content .hint {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.codes-section {
+    background: #1a1a1a4a;
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid #333;
+}
+
+.codes-section h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+.codes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.code-item {
+    background: #2a2a2a;
+    border-radius: 8px;
+    padding: 1.5rem;
+    border: 1px solid #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    animation: fadeIn 0.5s ease;
+}
+
+.code-item:hover {
+    background: #333;
+    border-color: #555;
+}
+
+.code-info {
+    flex: 1;
+}
+
+.code-label {
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.code-value {
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Courier New', monospace;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+}
+
+.code-value:hover {
+    color: #f0f0f0;
+    transform: scale(1.02);
+}
+
+.code-timer {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin: 0 1rem;
+}
+
+.timer-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#ffffff 0deg, #333 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #ffffff00;
+    transition: background 0.3s linear;
+}
+
+.code-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.action-btn {
+    padding: 0.5rem;
+    background: #444;
+    border: none;
+    border-radius: 6px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.action-btn:hover {
+    background: #555;
+    transform: translateY(-1px);
+}
+
+.action-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.action-btn:active {
+    transform: scale(0.95);
+}
+
+#addKey:active {
+    transform: scale(0.95);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    margin: 15% auto;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+.close {
+    color: #888;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close:hover {
+    color: #ffffff;
+}
+
+.modal-content h3 {
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.modal-content p {
+    color: #ccc;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 3rem 2rem;
+    color: #888;
+}
+
+.empty-state svg {
+    width: 64px;
+    height: 64px;
+    fill: #444;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .input-group {
+        flex-direction: column;
+    }
+    
+    .code-item {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .code-timer {
+        order: -1;
+    }
+    
+    .header-links {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .language-switcher {
+        margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .code-value {
+        font-size: 1.8rem;
+    }
+    
+    .upload-area {
+        padding: 2rem 1rem;
+    }
+    
+    .upload-icon {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .upload-content p {
+        font-size: 1rem;
+    }
+    
+    .upload-content .hint {
+        font-size: 0.8rem;
+    }
+    
+    .codes-section {
+        padding: 1.5rem;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+} 
