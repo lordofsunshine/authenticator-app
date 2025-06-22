@@ -22,9 +22,11 @@ class I18n {
                 'notification.code_copied': 'Code copied to clipboard',
                 'notification.link_copied': 'Link copied to clipboard',
                 'notification.language_changed': 'Language changed to English',
+                'notification.renamed': 'Key renamed successfully',
                 'button.copy_code': 'Copy code',
                 'button.copy_link': 'Copy link',
-                'button.delete': 'Delete'
+                'button.delete': 'Delete',
+                'prompt.rename_key': 'Enter new name for this key:'
             },
             ru: {
                 'placeholder.secretKey': 'Введите секретный ключ',
@@ -47,9 +49,11 @@ class I18n {
                 'notification.code_copied': 'Код скопирован в буфер обмена',
                 'notification.link_copied': 'Ссылка скопирована в буфер обмена',
                 'notification.language_changed': 'Язык изменен на русский',
+                'notification.renamed': 'Ключ успешно переименован',
                 'button.copy_code': 'Копировать код',
                 'button.copy_link': 'Копировать ссылку',
-                'button.delete': 'Удалить'
+                'button.delete': 'Удалить',
+                'prompt.rename_key': 'Введите новое название для ключа:'
             }
         };
         

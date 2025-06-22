@@ -227,7 +227,7 @@ class Authenticator {
             codeElement.className = 'code-item';
             codeElement.innerHTML = `
                 <div class="code-info">
-                    <div class="code-label">${code.label}</div>
+                    <div class="code-label" onclick="app.renameCode('${code.id}')">${code.label}</div>
                     <div class="code-value">${codeValue}</div>
                 </div>
                 <div class="code-timer">
@@ -336,6 +336,21 @@ class Authenticator {
         
         if (timeLeft < 0.5 || (timeLeft > 29.5 && timeLeft < 30)) {
             this.renderCodes();
+        }
+    }
+
+    renameCode(id) {
+        const codeItem = this.codes.find(code => code.id === id);
+        if (!codeItem) return;
+        
+        const newLabel = prompt(i18n.translate('prompt.rename_key'), codeItem.label);
+        if (newLabel === null) return;
+        
+        if (newLabel.trim() !== '') {
+            codeItem.label = newLabel.trim();
+            this.saveCodes();
+            this.renderCodes();
+            this.showNotification(i18n.translate('notification.renamed'));
         }
     }
 }
