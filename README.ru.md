@@ -1,7 +1,7 @@
 # Authenticator App
 
 ![Лицензия](https://img.shields.io/badge/лицензия-MIT-blue.svg)
-![Версия](https://img.shields.io/badge/версия-0.0.1-green.svg)
+![Версия](https://img.shields.io/badge/версия-0.0.2-green.svg)
 ![TOTP](https://img.shields.io/badge/TOTP-RFC--6238-orange.svg)
 
 Современное, безопасное и удобное веб-приложение для генерации одноразовых паролей по времени (TOTP).
