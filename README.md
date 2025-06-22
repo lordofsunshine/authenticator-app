@@ -1,7 +1,7 @@
 # Authenticator App
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Version](https://img.shields.io/badge/version-0.0.1-green.svg)
+![Version](https://img.shields.io/badge/version-0.0.2-green.svg)
 ![TOTP](https://img.shields.io/badge/TOTP-RFC--6238-orange.svg)
 
 A modern, secure, and user-friendly TOTP (Time-based One-Time Password) authenticator web application.
@@ -20,6 +20,10 @@ A modern, secure, and user-friendly TOTP (Time-based One-Time Password) authenti
 - **Offline Support:** All data is stored locally in your browser
 - **Multiple Languages:** Available in English and Russian
 
+## What's New
+- [x] The code duplication error has been fixed.
+- [x] A new feature has been added: renaming the added service. To rename the service, you need to click on the old name of the service on the website.
+      
 ## Security
 
 - All authentication data is stored locally in your browser's localStorage
